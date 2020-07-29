@@ -5,7 +5,7 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name="neosensory-python",
-    version="0.0.4",
+    version="0.0.1",
     author="Scott Novich",
     author_email="novich@neosensory.com",
     description="A package to help developers interact with Neosensory products",
