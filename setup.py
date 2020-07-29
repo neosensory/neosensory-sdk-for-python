@@ -5,12 +5,12 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name="neosensory-python",
-    version="0.0.2",
+    version="0.0.4",
     author="Scott Novich",
     author_email="novich@neosensory.com",
     description="A package to help developers interact with Neosensory products",
     long_description=long_description,
-    long_description_content_type="text/markdown",
+    long_description_content_type="text/x-rst",
     url="https://github.com/neosensory/neosensory-sdk-for-python",
     packages=setuptools.find_packages(),
     install_requires=['bleak'],
