@@ -54,32 +54,38 @@
 <dl class="py method">
 <dt id="neosensory_python.NeoDevice.accept_developer_api_terms">
 <em class="property">async </em><code class="sig-name descname">accept_developer_api_terms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.NeoDevice.accept_developer_api_terms" title="Permalink to this definition">¶</a></dt>
-<dd><p>After successfully calling auth as developer, use the accept command to agree to the Neosensory
-Developer API License (<a class="reference external" href="https://neosensory.com/legal/dev-terms-service/">https://neosensory.com/legal/dev-terms-service/</a>). Successfully calling
-this unlocks the following commands: audio start, audio stop, motors_clear_queue, motors start,
+<dd><p>After successfully calling auth as developer, use the accept
+command to agree to the Neosensory Developer API License
+(<a class="reference external" href="https://neosensory.com/legal/dev-terms-service/">https://neosensory.com/legal/dev-terms-service/</a>).
+Successfully calling this unlocks the following commands:
+audio start, audio stop, motors_clear_queue, motors start,
 motors_stop, motors vibrate.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="neosensory_python.NeoDevice.clear_motor_queue">
 <em class="property">async </em><code class="sig-name descname">clear_motor_queue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.NeoDevice.clear_motor_queue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clear any vibration commands sitting the device’s motor FIFO queue. This should be called prior
-to streaming control frames using motors vibrate. This command requires successful developer
+<dd><p>Clear any vibration commands sitting the device’s motor FIFO queue.
+This should be called prior to streaming control frames using
+motors vibrate. This command requires successful developer
 authorization, otherwise, the command will fail.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="neosensory_python.NeoDevice.disable_motors">
 <em class="property">async </em><code class="sig-name descname">disable_motors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.NeoDevice.disable_motors" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clear the motors command queue and shut down the motor drivers. This command requires
-successful developer authorization, otherwise, the command will fail.</p>
+<dd><p>Clear the motors command queue and shut down the
+motor drivers. This command requires successful developer
+authorization, otherwise, the command will fail.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="neosensory_python.NeoDevice.enable_motors">
 <em class="property">async </em><code class="sig-name descname">enable_motors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.NeoDevice.enable_motors" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize and start the motors interface. The motors can then accept motors vibrate commands.
-This command requires successful developer authorization, otherwise, the command will fail.</p>
+<dd><p>Initialize and start the motors interface.
+The motors can then accept motors vibrate commands.
+This command requires successful developer authorization,
+otherwise, the command will fail.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -95,38 +101,41 @@ This command requires successful developer authorization, otherwise, the command
 <dl class="py method">
 <dt id="neosensory_python.NeoDevice.get_battery_level">
 <em class="property">async </em><code class="sig-name descname">get_battery_level</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.NeoDevice.get_battery_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Obtain the device’s battery level in %. This command does not require developer authorization</p>
+<dd><p>Obtain the device’s battery level in %.
+This command does not require developer authorization</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="neosensory_python.NeoDevice.get_device_info">
 <em class="property">async </em><code class="sig-name descname">get_device_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.NeoDevice.get_device_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Obtain various device and firmware information. This command does not require developer
-authorization.</p>
+<dd><p>Obtain various device and firmware information.
+This command does not require developer authorization.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="neosensory_python.NeoDevice.pause_device_algorithm">
 <em class="property">async </em><code class="sig-name descname">pause_device_algorithm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.NeoDevice.pause_device_algorithm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pause the running algorithm on the device to accept motor control over the CLI. This command
-requires successful developer authorization, otherwise, the command will fail. TODO: handle
-returning JSON responses from device</p>
+<dd><p>Pause the running algorithm on the device to accept motor
+control over the CLI. This command requires successful
+developer authorization, otherwise, the command will fail.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="neosensory_python.NeoDevice.request_developer_authorization">
 <em class="property">async </em><code class="sig-name descname">request_developer_authorization</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.NeoDevice.request_developer_authorization" title="Permalink to this definition">¶</a></dt>
-<dd><p>Request developer authorization. The CLI returns the message “Please type ‘accept’ and hit
-enter to agree to Neosensory Inc’s Developer Terms and Conditions, which can be viewed at
+<dd><p>Request developer authorization. The CLI returns the message
+“Please type ‘accept’ and hit enter to agree to Neosensory
+Inc’s Developer Terms and Conditions, which can be viewed at
 <a class="reference external" href="https://neosensory.com/legal/dev-terms-service">https://neosensory.com/legal/dev-terms-service</a></p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="neosensory_python.NeoDevice.resume_device_algorithm">
 <em class="property">async </em><code class="sig-name descname">resume_device_algorithm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.NeoDevice.resume_device_algorithm" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Re)starts the device’s microphone audio acquisition / algorithm. This command requires
-successful developer authorization, otherwise, the command will fail. This is functionally the
-same as startAudio()</p>
+<dd><p>(Re)starts the device’s microphone audio acquisition and
+algorithm. This command requires successful developer
+authorization, otherwise, the command will fail. This
+is functionally the same as startAudio()</p>
 </dd></dl>
 
 <dl class="py method">
@@ -152,35 +161,42 @@ same as startAudio()</p>
 <dl class="py method">
 <dt id="neosensory_python.NeoDevice.start_audio">
 <em class="property">async </em><code class="sig-name descname">start_audio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.NeoDevice.start_audio" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Re)starts the device’s microphone audio acquisition. This command requires successful
-developer authorization, otherwise, the command will fail.</p>
+<dd><p>(Re)starts the device’s microphone audio acquisition.
+This command requires successful developer authorization,
+otherwise, the command will fail.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="neosensory_python.NeoDevice.stop_audio">
 <em class="property">async </em><code class="sig-name descname">stop_audio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.NeoDevice.stop_audio" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stop the device’s microphone audio acquisition. This should be called prior to transmitting
-motor vibration data. This command requires successful developer authorization, otherwise, the
-command will fail.</p>
+<dd><p>Stop the device’s microphone audio acquisition.
+This should be called prior to transmitting motor vibration data.
+This command requires successful developer authorization,
+otherwise, the command will fail.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="neosensory_python.NeoDevice.stop_motors">
 <em class="property">async </em><code class="sig-name descname">stop_motors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.NeoDevice.stop_motors" title="Permalink to this definition">¶</a></dt>
-<dd><p>Send a frame that turns off the motors. Note the API CLI command “motors stop” disables the
-motor drivers. This command requires successful developer authorization, otherwise, the command
-will fail. Assumes this is a 4-motor device (e.g. Neosensory Buzz)</p>
+<dd><p>Send a frame that turns off the motors. Note: the API
+CLI command “motors stop” disables the motor drivers.
+This command requires successful developer authorization,
+otherwise, the command will fail.
+Assumes this is a 4-motor device (e.g. Neosensory Buzz)</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="neosensory_python.NeoDevice.vibrate_motors">
 <em class="property">async </em><code class="sig-name descname">vibrate_motors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">motor_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.NeoDevice.vibrate_motors" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the actuators amplitudes on a connected Neosensory device. Note: actuators will stay
-vibrating indefinitely on the last frame received until a new control * frame is received</p>
-<dl class="simple">
+<dd><dl class="simple">
+<dt>Set the actuators amplitudes on a connected Neosensory device.</dt><dd><p>Note: actuators will stay vibrating indefinitely on the last
+frame received until a new control * frame is received</p>
+</dd>
 <dt>Args:</dt><dd><dl class="simple">
-<dt>motor_list: a list of motor intensity values on [0,255]. This is API call is designed for</dt><dd><p>Neosensory Buzz–and assumes 4 motors. If the list length is &gt; 4, the Buzz will put
-subsequent encodings on the queue to be played out on a 16 ms period.</p>
+<dt>motor_list: a list of motor intensity values on [0,255].</dt><dd><p>This is API call is designed for Neosensory Buzz–and assumes
+4 motors. If the list length is &gt; 4, the Buzz will put
+subsequent encodings on the queue to be played out on a
+16 ms period.</p>
 </dd>
 </dl>
 </dd>
@@ -193,12 +209,17 @@ subsequent encodings on the queue to be played out on a 16 ms period.</p>
 <dt id="neosensory_python.get_buzz_illusion_activations">
 <code class="sig-prename descclassname">neosensory_python.</code><code class="sig-name descname">get_buzz_illusion_activations</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">linear_intensity</span></em>, <em class="sig-param"><span class="n">location</span></em>, <em class="sig-param"><span class="n">min_intensity</span></em>, <em class="sig-param"><span class="n">max_intensity</span></em>, <em class="sig-param"><span class="n">num_motors</span></em><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.get_buzz_illusion_activations" title="Permalink to this definition">¶</a></dt>
 <dd><dl>
-<dt>Apply a haptic illusion across a Neosensory device to create the sensation of a single</dt><dd><p>arbitrary point around the wrist vibrating.</p>
+<dt>Apply a haptic illusion across a Neosensory device</dt><dd><p>to create the sensation of a single arbitrary point
+around the wrist vibrating.</p>
 </dd>
 <dt>Args:</dt><dd><p>linear_intensity: an intensity value on [0,1]</p>
 <p>location: a location around the wrist on [0,1]</p>
-<p>min_intensity: a minimum motor intensity value. Typically 0 or minimal perceptible motor activation value.</p>
-<p>max_intensity: a maximum motor intensity value. For Neosensory Buzz, motor values can be on [0,255]</p>
+<dl class="simple">
+<dt>min_intensity: a minimum motor intensity value.</dt><dd><p>Typically 0 or minimal perceptible motor activation value.</p>
+</dd>
+<dt>max_intensity: a maximum motor intensity value.</dt><dd><p>For Neosensory Buzz, motor values can be on [0,255]</p>
+</dd>
+</dl>
 <p>num_motors: number of motors on the device (4 for Neosensory Buzz)</p>
 </dd>
 <dt>Returns:</dt><dd><p>A list of motor encodings representing an illusory point.</p>
@@ -209,11 +230,16 @@ subsequent encodings on the queue to be played out on a 16 ms period.</p>
 <dl class="py function">
 <dt id="neosensory_python.get_motor_intensity">
 <code class="sig-prename descclassname">neosensory_python.</code><code class="sig-name descname">get_motor_intensity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">linear_intensity</span></em>, <em class="sig-param"><span class="n">min_intensity</span></em>, <em class="sig-param"><span class="n">max_intensity</span></em><span class="sig-paren">)</span><a class="headerlink" href="#neosensory_python.get_motor_intensity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Linearly map a value on [0,1] to a motor vibration strenght on [min_intensity, max_intensity]</p>
-<dl>
+<dd><dl>
+<dt>Linearly map a value on [0,1] to a motor</dt><dd><p>vibration strenght on [min_intensity, max_intensity]</p>
+</dd>
 <dt>Args:</dt><dd><p>linear_intensity: an intensity value on [0,1]</p>
-<p>min_intensity: a minimum motor intensity value. Typically 0 or minimal perceptible motor activation value.</p>
-<p>max_intensity: a maximum motor intensity value. For Neosensory Buzz, motor values can be on [0,255]</p>
+<dl class="simple">
+<dt>min_intensity: a minimum motor intensity value.</dt><dd><p>Typically 0 or minimal perceptible motor activation value.</p>
+</dd>
+<dt>max_intensity: a maximum motor intensity value.</dt><dd><p>For Neosensory Buzz, motor values can be on [0,255]</p>
+</dd>
+</dl>
 </dd>
 <dt>Returns:</dt><dd><p>A linearly mapped value on [min_intensity, max_intensity]</p>
 </dd>

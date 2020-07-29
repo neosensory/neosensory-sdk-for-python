@@ -4,8 +4,8 @@ with open("README.rst", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="neosensory-python-greatscott",
-    version="0.0.1",
+    name="neosensory-python",
+    version="0.0.2",
     author="Scott Novich",
     author_email="novich@neosensory.com",
     description="A package to help developers interact with Neosensory products",
