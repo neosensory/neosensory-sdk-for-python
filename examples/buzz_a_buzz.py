@@ -45,7 +45,7 @@ async def run(loop):
 
         try:
             while True:
-                asyncio.sleep(0.5)
+                await asyncio.sleep(0.1)
                 await my_buzz.vibrate_motors(motor_vibrate_frame)
                 motor_pattern_index = (motor_pattern_index + 1) % 4
                 motor_pattern_value = (motor_pattern_value + 20) % 255

@@ -11,8 +11,9 @@ def notification_handler(sender, data):
 
 async def run(loop):
 
-    # Example Address
+    # "X" will  get overwritten if a Buzz is found
     buzz_addr = "X" # e.g. "EB:CA:85:38:19:1D"
+    # scan for a buzz
     devices = await discover()
     for d in devices:
         if str(d).find("Buzz") > 0:
@@ -21,8 +22,12 @@ async def run(loop):
             # set the address to a found Buzz
             buzz_addr = str(d)[:17]
 
+    # Initiate the connection. If a buzz has not been found
+    # the script will throw an error
     async with BleakClient(buzz_addr, loop=loop) as client:
 
+        # create a NeoDevice object and assign it 
+        # the BleakClient object
         my_buzz = NeoDevice(client)
 
         await asyncio.sleep(1)
@@ -45,7 +50,7 @@ async def run(loop):
 
         try:
             while True:
-                asyncio.sleep(0.5)
+                await asyncio.sleep(0.1)
                 await my_buzz.vibrate_motors(get_buzz_illusion_activations
                     (illusion_intensity, illusion_location, 0, 255, 4))
                 illusion_location = (illusion_location + 0.01) % 1
