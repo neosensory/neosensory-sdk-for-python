@@ -10,7 +10,7 @@ def notification_handler(sender, data):
 
 async def run(loop):
 
-    # Example Address
+    # "X" will  get overwritten if a Buzz is found
     buzz_addr = "X"  # e.g. "EB:CA:85:38:19:1D"
     devices = await discover()
     for d in devices:
