@@ -16,6 +16,12 @@ you can clone this repo and run
 
 	python setup.py develop
 
+or
+
+.. code-block:: bash
+
+	pip install neosensory-python
+
 from within the root directory.
 
 
