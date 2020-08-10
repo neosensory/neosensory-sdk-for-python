@@ -18,8 +18,6 @@ setuptools.setup(
         "Development Status :: 1 - Planning",
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: Microsoft :: Windows :: Windows 10",
-        "Operating System :: POSIX :: Linux",
-        "Operating System :: MacOS :: MacOS X",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.5",
