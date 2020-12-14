@@ -1,9 +1,15 @@
 Neosensory Python SDK
 =====================
 
-**NOTE: This SDK is not fully working yet and we are not able to offer support for it at this time.**
+**NOTE: This SDK is not fully working yet and we are not able to offer (much) support for it at this time.**
 
-A Python package for interacting with Neosensory products. This is designed to work with `Bleak <https://github.com/hbldh/bleak>`_, a cross-platform Python Bluetooth Low Energy (BLE) client for Windows, MacOS, and Linux. Please see the Bleak project page for more specifics on supported platforms. **IMPORTANT: At the moment this is tested and only working on Windows.**
+A Python package for interacting with Neosensory products. This is designed to work with `Bleak <https://github.com/hbldh/bleak>`_, a cross-platform Python Bluetooth Low Energy (BLE) client for Windows, MacOS, and Linux. Please see the Bleak project page for more specifics on supported platforms. 
+
+Support Status
+==============
+* Windows - Seemingly working (Supports Windows 10, version 16299 (Fall Creators Update) or greater per Bleak)
+* MacOS - Not working
+* Linux - Not working
 
 Requirements
 ============
