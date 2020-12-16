@@ -1,6 +1,7 @@
 import base64
 import uuid
 import math
+import struct
 
 # The GATT Characteristic used for writing to Neosensory Buzz
 ns_uart_rx_id = uuid.UUID('6E400002-B5A3-F393-E0A9-E50E24DCCA9E')
@@ -158,11 +159,10 @@ class NeoDevice:
                 16 ms period.
 
         """
-
-        motor_command_string = "motors vibrate \"{}\"\r\n".format(base64.
-            b64encode(bytearray(motor_list)).decode('utf-8')).encode("utf-8")
+        motor_list_len = len(motor_list)
+        motor_int_encode = struct.pack('<{}'.format('B' * motor_list_len), *motor_list)
+        motor_command_string = "motors vibrate {}\r\n".format(base64.b64encode(motor_int_encode).decode()).encode("utf-8")
         await self.client.write_gatt_char(ns_uart_rx_id, motor_command_string)
-
 
 def get_motor_intensity(linear_intensity, min_intensity, max_intensity):
     """Linearly map a value on [0,1] to a motor
