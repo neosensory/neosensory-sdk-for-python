@@ -38,11 +38,13 @@ Troubleshooting
 If the script returns an error - 
 
 .. code-block:: bash
+
 	bleak.exc.BleakDBusError: org.bluez.Error.NotPermitted
 
 This means that you are using Bleak v0.11.0. You'll have to update the bleak version to v0.10.0. Usually, this does not occur, but in case it does, head over to the terminal and type - 
 
 .. code-block:: bash
+
 	pip install bleak==0.10.0
 	
 After this, it should work as intended. 
